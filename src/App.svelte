@@ -68,11 +68,11 @@
 <div class="container">
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-  <img src="https://media.discordapp.net/attachments/699338491351531644/1262436435286298755/dolar.gif?ex=6696970d&is=6695458d&hm=852424686087dbd152f58887a02949bd8280a4d3f5ba907af25f5a694cebd5d2&=&width=155&height=553" alt="ad" id="ad2" on:click={onAdClick}>
+  <img src="../ad1.gif" alt="ad" id="ad2" on:click={onAdClick}>
   <div class="acrylic-effect">
     <div class="alt">
       <div class="profile">
-        <img src="https://media.discordapp.net/attachments/699338491351531644/1262424989966274580/Lava.png?ex=66968c64&is=66953ae4&hm=8f0b14cd8b1b3da993ecf1259f72b79d9ab853e5a6a8bde400deb207db2a3561&=&format=webp&quality=lossless" alt="pfp">
+        <img src="../sqrLava.png" alt="pfp">
         <h1>@ohalava</h1>
       </div>
       <div class="row">
@@ -93,7 +93,7 @@
     </div>
     <!-- svelte-ignore a11y-click-events-have-key-events -->
     <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-    <img src="https://media.discordapp.net/attachments/699338491351531644/1262434860354633801/kedi_popup.gif?ex=66969595&is=66954415&hm=ea8e02d01742dba46a4be7f1571e91b2617d535f65bd5f38616e16f900284969&=&width=156&height=554" alt="ad" id="ad1" on:click={randomCatVids}>
+    <img src="../ad2.gif" alt="ad" id="ad1" on:click={randomCatVids}>
   </div>
 
 <style>
