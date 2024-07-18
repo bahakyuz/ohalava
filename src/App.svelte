@@ -1,4 +1,5 @@
 <script>
+// @ts-nocheck
   function onAdClick() {
     const overlay = document.querySelector('.overlay');
     // @ts-ignore
@@ -6,9 +7,9 @@
     // @ts-ignore
     overlay.style.opacity = 0;
     let opacity = 0;
+    playSound();
     const interval = setInterval(() => {
       if (opacity < 1) {
-        playSound();
         opacity += 1;
         // @ts-ignore
         overlay.style.opacity = opacity;
@@ -68,36 +69,34 @@
 <div class="container">
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-  <img src="../ad1.gif" alt="ad" id="ad2" on:click={onAdClick}>
-  <div class="acrylic-effect">
+  <img src="../ad2.gif" alt="ad" id="ad2" on:click={randomCatVids}>
     <div class="alt">
       <div class="profile">
         <img src="../sqrLava.png" alt="pfp">
         <h1>@ohalava</h1>
       </div>
-      <div class="row">
-        <div class="support">
-          <h3><i class="fa-regular fa-folder-open"></i> Destekle </h3>
-          <a href="https://www.papara.com/donate/OhaLava" target="_blank"><p><i class="fa-solid fa-arrow-turn-up"></i> <i class="fa-solid fa-dollar-sign"></i> Papara</p></a>
-          <a href="https://www.bynogame.com/tr/destekle/ohalava" target="_blank"><p><i class="fa-solid fa-arrow-turn-up"></i> <i class="fa-solid fa-dollar-sign"></i> ByNoGame</p></a>
+        <div class="row">
+          <div class="support">
+            <!-- svelte-ignore a11y-click-events-have-key-events -->
+            <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+            <h3><i class="fa-regular fa-folder-open"></i> Destekle </h3>
+              <a href="https://www.papara.com/donate/OhaLava" target="_blank"><p><i class="fa-solid fa-arrow-turn-up"></i> <i class="fa-solid fa-dollar-sign"></i> Papara</p></a>
+              <a href="https://www.bynogame.com/tr/destekle/ohalava" target="_blank"><p><i class="fa-solid fa-arrow-turn-up"></i> <i class="fa-solid fa-dollar-sign"></i> ByNoGame</p></a>
+          </div>
+            <a href="https://www.instagram.com/ohalava/" target="_blank"><p><i class="fa-brands fa-instagram"></i>Instagram</p></a>
+            <a href="http://twitch.tv/ohalava" target="_blank"><p><i class="fa-brands fa-twitch"></i>Twitch</p></a>
+            <a href="https://youtube.com/@OhaLava" target="_blank"><p><i class="fa-brands fa-youtube"></i>Youtube</p></a>
+            <a href="https://discord.com/invite/RwzBsMTpc9" target="_blank"><p><i class="fa-brands fa-discord"></i>Discord</p></a>
+            <a href="https://twitter.com/ohalava" target="_blank"><p><i class="fa-brands fa-x-twitter"></i>Twitter</p></a>
+            <a href="https://www.behance.net/gallery/170092175/My-Portfolio" target="_blank"><p><i class="fa-brands fa-behance"></i>Behance</p></a>
         </div>
-          <a href="https://www.instagram.com/ohalava/" target="_blank"><p><i class="fa-brands fa-instagram"></i>Instagram</p></a>
-          <a href="http://twitch.tv/ohalava" target="_blank"><p><i class="fa-brands fa-twitch"></i>Twitch</p></a>
-          <a href="https://youtube.com/@OhaLava" target="_blank"><p><i class="fa-brands fa-youtube"></i>Youtube</p></a>
-          <a href="https://discord.com/invite/RwzBsMTpc9" target="_blank"><p><i class="fa-brands fa-discord"></i>Discord</p></a>
-          <a href="https://twitter.com/ohalava" target="_blank"><p><i class="fa-brands fa-x-twitter"></i>Twitter</p></a>
-          <a href="https://www.behance.net/gallery/170092175/My-Portfolio" target="_blank"><p><i class="fa-brands fa-behance"></i>Behance</p></a>
-        </div>
-  </div>
-
     </div>
-    <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-    <img src="../ad2.gif" alt="ad" id="ad1" on:click={randomCatVids}>
-  </div>
+  <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+  <img src="../ad1.gif" alt="ad" id="ad1" on:click={onAdClick}>
+</div>
 
 <style>
-
   .container {
     display: flex;
     margin: 0 auto;
@@ -117,16 +116,7 @@
     align-items: center;
     min-height: auto;
     overflow: hidden;
-    width: 400px;
-  }
-
-  .acrylic-effect {
-    background-color: rgba(223, 223, 223, 0.5); 
-    backdrop-filter: blur(15px);
-    border: 0px solid rgba(0, 0, 0, 0.2);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    padding: 10px;
-    border-radius: 2%;
+    width: 600px;
   }
 
   .profile {
@@ -152,8 +142,10 @@
   .row p {
     font-family: "San Francisco", sans-serif;
     font-size: 1.1rem;
-    color: black;
+  }
 
+  .row p:hover {
+  text-decoration: underline;
   }
 
   .support h3 {
@@ -166,12 +158,8 @@
     color: black;
   }
 
-  .support {
-    width: fit-content;
-  }
-  
   .support p {
-    margin-left: 20px;
+    margin-left: 10px;
   }
 
   .fa-regular.fa-folder-open {
@@ -179,9 +167,7 @@
   }
 
   i {
-    padding-right: 10px;
-    margin: 0%;
-    padding-bottom: 0%;
+    padding-right: 8px;    
     font-size: 1.3rem;
   }
 
@@ -193,11 +179,11 @@
   }
 
   #ad1 {
-    right: 5px;
+    left: 5px;
   }
 
   #ad2 {
-    left: 5px;
+    right: 5px;
   }
 
   .fa-solid.fa-arrow-turn-up {
@@ -243,4 +229,35 @@
   .fa-brands.fa-behance {
     color: #1769FF;
   }
+
+  @media (max-width: 768px) {
+  .alt {
+    width: 150px;
+  }
+
+  .profile {
+    font-size: .7rem;
+  }
+
+  .row p {
+    font-size: .9rem;
+  }
+
+  #ad1, #ad2 {
+    cursor: pointer;
+    -webkit-user-drag: none;
+    user-select: none;
+    position: absolute;
+    z-index: 9999;
+    height: 40%;
+  }
+
+  #ad1 {
+    left: 0px;
+  }
+  #ad2 {
+    right: 0px;
+  }
+}
+
 </style>
